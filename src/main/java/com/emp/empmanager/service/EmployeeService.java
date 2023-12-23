@@ -19,7 +19,7 @@ public class EmployeeService {
         this.empRepo = empRepo;
     }
 
-    // generate a Employee Code
+    // add & generate a Employee Code
     public Employee addEmp(Employee emp){
         emp.setEmployeeCode(UUID.randomUUID().toString());
         return empRepo.save(emp);
