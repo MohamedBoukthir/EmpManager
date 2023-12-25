@@ -3,6 +3,7 @@ package com.emp.empmanager.service;
 import com.emp.empmanager.exception.UserNotFoundException;
 import com.emp.empmanager.model.Employee;
 import com.emp.empmanager.repo.EmployeeRepo;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
+@Transactional
 public class EmployeeService {
 
     private final EmployeeRepo empRepo;
